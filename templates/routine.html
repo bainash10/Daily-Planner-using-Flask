@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1 class="mt-5">Routine View</h1>
+<!-- Add your routine view here -->
+<div id="routine-view">
+    <ul class="list-group">
+        {% for task in tasks %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ task.time_slot }} - {{ task.description }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
